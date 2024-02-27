@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+
+video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+header span {
+    font-weight: 800;
+    font-size: 4rem;
+    display: block;
+}
+
+.menu {
+    position: absolute;
+    bottom: 20%;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    opacity: 0.7;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
+    text-align: justify;
+    max-width: 45rem;
+    margin-inline: auto;
+    line-height: 1.5;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navbar button {
+    margin: 0.5rem;
+}
+
+/* buttons */
+
+button {
+    --text-base: 277deg, 55%, 40%;
+    --text-hover: 307deg, 72%, 86%;
+    --shadow-start: 52deg, 100%, 72%;
+    --shadow-end: 282deg, 90%, 50%;
+    --shadow-inner: 277deg, 90%, 62%;
+    all: unset;
+    color: white;
+    font: 700 1rem/1.2 Raleway, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.85em;
+    max-width: 100%;
+    width: 100%;
+    background: inherit;
+    background-clip: padding-box;
+    border: 5px solid white;
+    border-radius: 2em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease-out;
+  }
+  button::before, button::after {
+    content: "";
+    border-radius: inherit;
+    transition: inherit;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  button::before {
+    inset: -0.2em;
+    z-index: -1;
+    background: linear-gradient(hsla(var(--shadow-start), 1), hsla(var(--shadow-end), 1));
+    filter: blur(1.2em) saturate(1.2);
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+  button::after {
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px rgba(255, 255, 255, 0.7), 1px 1px 0 4px #fff;
+    mix-blend-mode: overlay;
+    opacity: 0;
+  }
+  button:hover, button:focus {
+    color: white;
+    border-color: transparent;
+    box-shadow: inset 0 1.4em 0 hsla(var(--shadow-inner), 0.1), inset 0 0 1.4em hsla(var(--shadow-inner), 0.32), 0 1px 1px hsla(var(--shadow-inner), 0.32);
+  }
+  button:hover::before, button:hover::after, button:focus::before, button:focus::after {
+    transform: none;
+    opacity: 1;
+  }
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.links a {
+    font-size: 1.7rem;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.links a:hover {
+    color: #B278F0;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px){
+    .menu {
+        position: absolute;
+        width: 91vw;
+        bottom: 0;
+        border-radius: 20px 20px 0 0;
+        margin: auto;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .navbar button {
+        width: 150px;
+    }
+
+    button {
+        font: 700 1rem/1.2 Raleway, sans-serif;
+    }
+}
+
+@media screen and (max-width: 650px){ 
+    header h1 {
+        font-size: 1.75rem;
+    }
+/*
+    header span {
+        font-size: 2.3rem;
+    }
+*/
+    .menu {
+        position: absolute;
+        width: 70vw;
+        bottom: 0;
+        border-radius: 20px 20px 0 0;
+        margin: auto;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .navbar button {
+        width: 120px;
+    }
+}
+
+/* Pagina reservar */
+
+.reservarContainer {
+    background-color: transparent;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.navbarNoHome {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.82);
+}
+
+.navbarNoHomeElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.7rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.active {
+    color: #12A2DE !important;
+}
+
+.reservarFormContainer {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reservarFormContainer form {
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.reservarFormContainer form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.reservarFormContainer form input,select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.reservarFormContainer form button {
+    background-color: #12A2DE;
+    width: auto;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservarFormContainer form button:hover {
+    background-color: #45a049;
+}
+
+.video-background {
+    position: fixed;
+    top: 86px;
+    width: 100%;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    z-index: -1000;
+}
+
+.video-background video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Asegura que el video quede detrás del contenido */
+}
+
+@media screen and (max-width: 800px){
+    .navbarNoHome {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+
+    .navbarNoHomeElement{
+        margin: -10px;
+    }
+
+    .reservarFormContainer {
+        margin: 0;
+    }
+
+    .video-background {
+        top: 265px;
+        overflow: scroll;
+    }
+
+    body {
+        overflow: auto;
+    }
+}

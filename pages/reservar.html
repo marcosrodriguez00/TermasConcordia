@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../Resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Reservar || Eucalis</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="../Resources/Video termas.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+
+    <div class="reservarContainer">
+        <nav class="navbarNoHome">
+            <a class="navbarNoHomeElement" href="../index.html">
+                <i class="bi bi-house"></i>
+                <p>Home</p>
+            </a>
+            <a class="navbarNoHomeElement active" href="#">
+                <i class="bi bi-calendar-check"></i>
+                <p>Reservar</p>
+            </a>
+            <a class="navbarNoHomeElement" href="infoBungalows.html">
+                <i class="bi bi-card-image"></i>
+                <p>Bungalows</p>
+            </a>
+            <a class="navbarNoHomeElement" href="actividades.html">
+                <i class="bi bi-info-circle"></i>
+                <p>Actividades</p>
+            </a>
+        </nav>
+
+        <div class="reservarFormContainer">
+            <form action="../enviar_cotizacion.php" method="POST">
+                <label for="nombreCompleto">Nombre Completo:</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required><br>
+
+                <label for="correoContacto">Correo Electrónico:</label>
+                <input type="text" id="correoContacto" name="correoContacto" required><br>
+
+                <label for="numeroContacto">Numero de Contacto:</label>
+                <input type="text" id="numeroContacto" name="numeroContacto" required><br>
+
+                <label for="fechaIngreso">Fecha de Ingreso:</label>
+                <input type="date" id="fechaIngreso" name="fechaIngreso" required><br>
+        
+                <label for="fechaSalida">Fecha de Salida:</label>
+                <input type="date" id="fechaSalida" name="fechaSalida" required><br>
+        
+                <label for="cantidadAdultos">Cantidad de Adultos (+7 años):</label>
+                <input type="number" id="cantidadAdultos" name="cantidadAdultos" min="0" required><br>
+        
+                <label for="cantidadNinos">Cantidad de Niños (3 a 6 años):</label>
+                <input type="number" id="cantidadNinos" name="cantidadNinos" min="0" required><br>
+        
+                <label for="cantidadBebes">Cantidad de Bebés (0 a 3 años):</label>
+                <input type="number" id="cantidadBebes" name="cantidadBebes" min="0" required><br>
+
+                <label for="cantidadMascotas">Cantidad de Mascotas:</label>
+                <input type="number" id="cantidadMascotas" name="cantidadMascotas" min="0" required><br>
+        
+                <button type="submit" style="margin-top: 10px;">Reservar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
