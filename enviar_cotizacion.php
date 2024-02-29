@@ -31,26 +31,13 @@
         $headers = "From: $correoContacto";
 
         if (mail($destinatario, $asunto, $mensaje, $headers)) {
-            // Si el correo se envió correctamente, muestra un Sweet Alert de éxito y redirige al usuario a la página de reserva
-            echo "<script>
-                    Swal.fire(
-                        'Reserva exitosa',
-                        '¡Tu reserva ha sido enviada con éxito!',
-                        'success'
-                    ).then((result) => {
-                        // Redirige al usuario a la página de reserva
-                        window.location.href = 'reservar.html';
-                    });
-                  </script>";
+            // Si el correo se envió correctamente, redirige al usuario a la página de reserva
+            header("Location: formRecieved.html");
+            exit; // Asegura que el script no continúe después de la redirección
         } else {
-            // Si hay un error al enviar el correo, muestra un Sweet Alert de error
-            echo "<script>
-                    Swal.fire(
-                        'Error',
-                        'Ha ocurrido un error al enviar la reserva. Por favor, inténtalo de nuevo más tarde.',
-                        'error'
-                    );
-                  </script>";
+            // Si hay un error al enviar el correo, redirige al usuario a una página de error
+            header("Location: formError.html");
+            exit;
         }
     } else {
         // Si se intenta acceder al script directamente sin enviar el formulario, redirige al formulario
