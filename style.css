@@ -54,7 +54,7 @@ header span {
 }
 
 .menu p {
-    text-align: justify;
+    text-align: center;
     max-width: 45rem;
     margin-inline: auto;
     line-height: 1.5;
@@ -171,14 +171,20 @@ button {
 }
 
 @media screen and (max-width: 650px){ 
+
+    header {
+        top: 25%;
+    }
+
     header h1 {
-        font-size: 1.75rem;
+        font-size: 1.7rem;
+        padding-top: 0;
     }
-/*
+
     header span {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
-*/
+
     .menu {
         position: absolute;
         width: 70vw;
@@ -234,6 +240,8 @@ button {
 .reservarFormContainer {
     height: 80vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
@@ -278,6 +286,15 @@ button {
 
 .reservarFormContainer form button:hover {
     background-color: #45a049;
+}
+
+.reservarFormContainer p {
+    background-color: rgba(255, 255, 255, 0.82);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .video-background {

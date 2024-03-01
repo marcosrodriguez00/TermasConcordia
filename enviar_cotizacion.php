@@ -31,12 +31,13 @@
         $headers = "From: $correoContacto";
 
         if (mail($destinatario, $asunto, $mensaje, $headers)) {
+            @mail($destinatario, $asunto, $mensaje, $headers);
             // Si el correo se envió correctamente, redirige al usuario a la página de reserva
-            header("Location: formRecieved.html");
+            header("Location: pages/formRecieved.html");
             exit; // Asegura que el script no continúe después de la redirección
         } else {
             // Si hay un error al enviar el correo, redirige al usuario a una página de error
-            header("Location: formError.html");
+            header("Location: pages/formError.html");
             exit;
         }
     } else {
