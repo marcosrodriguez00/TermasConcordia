@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <title>Imágenes || Eucalis</title>
 </head>
-<body>
+<body style="background-color: rgba(1, 29, 29, 0.836); overflow-y: scroll; margin-bottom: 5rem;">
     
     <!--
     <div class="video-background">
@@ -20,7 +20,7 @@
     </div>
     -->
 
-    <div class="reservarContainer" style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
         <nav class="navbarNoHome">
             <a class="navbarNoHomeElement" href="../index.html">
                 <i class="bi bi-house"></i>
@@ -40,29 +40,15 @@
             </a>
         </nav>
 
-        <div class="bungalowImageContainer">
+        <div class="bungalowInfoDisplay" style="margin-top: 3rem;">
             <h3>Bungalow 1</h3>
-            <div class="images-slider">
-                <a id="prev-slide" role="button" class="slide-button material-symbols-rounded">chevron_left</a>
-                <div class="images-list">
-                    <img src="../Resources/fotosBungalows/bungalows1.JPG" alt="Foto bungalows" class="image-item">
-                    <img src="../Resources/fotosBungalows/bungalows2.JPG" alt="Foto bungalows" class="image-item">
-                    <img src="../Resources/fotosBungalows/bungalows3.JPG" alt="Foto bungalows" class="image-item">
-                    <img src="../Resources/fotosBungalows/bungalows4.JPG" alt="Foto bungalows" class="image-item">
-                    <img src="../Resources/fotosBungalows/bungalows5.JPG" alt="Foto bungalows" class="image-item">
-                    <img src="../Resources/fotosBungalows/bungalows6.JPG" alt="Foto bungalows" class="image-item">
-                </div>
-                <a id="next-slide" role="button" class="slide-button material-symbols-rounded">chevron_right</a>
-
-            </div>
-            <div class="slider-scrollbar">
-                <div class="scrollbar-track">
-                    <div class="scrollbar-thumb">
-
-                    </div>
-                </div>
-            </div>
+            <article class="imageContainer">
+                <div class="imageSlider"></div>
+            </article>
         </div>
+        
     </div>
+
+    <script src="../imageSlider.js"></script>
 </body>
 </html>
