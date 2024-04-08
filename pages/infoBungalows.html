@@ -40,15 +40,28 @@
             </a>
         </nav>
 
-        <div class="bungalowInfoDisplay" style="margin-top: 3rem;">
+        <section class="imagesSection">
             <h3>Bungalow 1</h3>
-            <article class="imageContainer">
-                <div class="imageSlider"></div>
+            <article class="imagesDisplay">
+                <img src="../Resources/fotosBungalows/bungalows1.JPG" class="active">
+                <img src="../Resources/fotosBungalows/bungalows2.JPG">
+                <img src="../Resources/fotosBungalows/bungalows3.JPG">
+                <img src="../Resources/fotosBungalows/bungalows4.JPG">
             </article>
-        </div>
-        
+            <div class="buttonsContainer">
+                <button id="prev" onclick="prev()"> <b>&lt;</b> </button>
+                <div class="dots">
+                    <button onclick="dot(1)"></button>
+                    <button onclick="dot(2)"></button>
+                    <button onclick="dot(3)"></button>
+                    <button onclick="dot(4)"></button>
+                </div>
+                <button id="next" onclick="next()"> <b>&gt;</b> </button>
+            </div>
+        </section>
+
     </div>
 
-    <script src="../imageSlider.js"></script>
+    <script src="../iamgeSlider2.js"></script>
 </body>
 </html>
