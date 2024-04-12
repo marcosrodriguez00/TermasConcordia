@@ -42,21 +42,41 @@
 
         <section class="imagesSection">
             <h3>Bungalow 1</h3>
-            <article class="imagesDisplay">
+            <article class="imagesDisplay" id="imagesDisplay1">
                 <img src="../Resources/fotosBungalows/bungalows1.JPG" class="active">
                 <img src="../Resources/fotosBungalows/bungalows2.JPG">
                 <img src="../Resources/fotosBungalows/bungalows3.JPG">
                 <img src="../Resources/fotosBungalows/bungalows4.JPG">
             </article>
             <div class="buttonsContainer">
-                <button id="prev" onclick="prev()"> <b>&lt;</b> </button>
-                <div class="dots">
+                <button id="prev" onclick="prev1()"> <b>&lt;</b> </button>
+                <div class="dots" id="dots1">
                     <button onclick="dot(1)"></button>
                     <button onclick="dot(2)"></button>
                     <button onclick="dot(3)"></button>
                     <button onclick="dot(4)"></button>
                 </div>
-                <button id="next" onclick="next()"> <b>&gt;</b> </button>
+                <button id="next" onclick="next1()"> <b>&gt;</b> </button>
+            </div>
+        </section>
+
+        <section class="imagesSection">
+            <h3>Bungalow 2</h3>
+            <article class="imagesDisplay" id="imagesDisplay2">
+                <img src="../Resources/fotosBungalows/bungalows1.JPG" class="active">
+                <img src="../Resources/fotosBungalows/bungalows2.JPG">
+                <img src="../Resources/fotosBungalows/bungalows3.JPG">
+                <img src="../Resources/fotosBungalows/bungalows4.JPG">
+            </article>
+            <div class="buttonsContainer">
+                <button id="prev" onclick="prev2()"> <b>&lt;</b> </button>
+                <div class="dots" id="dots2">
+                    <button onclick="dot(1)"></button>
+                    <button onclick="dot(2)"></button>
+                    <button onclick="dot(3)"></button>
+                    <button onclick="dot(4)"></button>
+                </div>
+                <button id="next" onclick="next2()"> <b>&gt;</b> </button>
             </div>
         </section>
 
